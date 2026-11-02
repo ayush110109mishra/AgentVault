@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* Light Mode Tokens (Original AgentVault X colors: clean white surfaces, deep corporate navy, royal blue, brand orange) */
+    --bg-base: #F0F4FA;
+    --bg-surface: #FFFFFF;
+    --bg-header: #FFFFFF;
+    --bg-sidebar: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #F8FAFC;
+    --bg-input: #FFFFFF;
+    --bg-code: #F8FAFC;
+    
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+    
+    --text-primary: #153B75;
+    --text-secondary: #53657E;
+    --text-muted: #8092A8;
+    
+    --accent-blue: #175CD3;
+    --accent-orange: #F07828;
+    
+    --status-green: #059669;
+    --status-amber: #D97706;
+    --status-red: #DC2626;
+
+    --scrollbar-track: #F1F5F9;
+    --scrollbar-thumb: #CBD5E1;
+    --scrollbar-thumb-hover: #94A3B8;
+  }
+
+  html.dark, :root.dark {
+    /* Dark Mode Tokens (Deep navy #090D16, elevated charcoal #0F172A, cool-gray borders, electric-blue accents) */
+    --bg-base: #090D16;
+    --bg-surface: #0F172A;
+    --bg-header: #0B0F19;
+    --bg-sidebar: #0B0F19;
+    --bg-card: #131E33;
+    --bg-card-hover: #182642;
+    --bg-input: #0B1120;
+    --bg-code: #070B13;
+    
+    --border-subtle: #1E293B;
+    --border-strong: #334155;
+    
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    
+    --accent-blue: #3B82F6;
+    --accent-orange: #F97316;
+    
+    --status-green: #10B981;
+    --status-amber: #F59E0B;
+    --status-red: #EF4444;
+
+    --scrollbar-track: #090D16;
+    --scrollbar-thumb: #1E293B;
+    --scrollbar-thumb-hover: #334155;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Developer Console Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Adaptive Surfaces & Panels */
+.surface-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.surface-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.surface-card-hover {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.15s ease-in-out;
+}
+.surface-card-hover:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-strong);
+}
+
+.surface-input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.surface-input:focus {
+  border-color: var(--accent-blue);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--accent-blue);
+}
+
+/* Primary High-Intent Action Button */
+.btn-primary {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+  filter: brightness(0.92);
+}
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+/* Secondary Action Button */
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-strong);
+}
+
+/* Subtle code block */
+.code-block {
+  background-color: var(--bg-code);
+  border: 1px solid var(--border-subtle);
+  font-family: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AgentVault X",
+  "description": "Voice-Controlled, Trust-Aware Multi-Agent Execution Platform. Discover, orchestrate, and supervise AI agents through one intelligent execution layer.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
