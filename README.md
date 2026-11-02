@@ -1,4 +1,4 @@
-# AgentVault X
+# AgentVault 
 
 > **Voice-Controlled, Trust-Aware Multi-Agent Execution Platform powered by Open-Weight AI.**  
 > Orchestrate, supervise, and audit specialized autonomous AI agents through one deterministic, policy-guarded execution layer.
@@ -7,7 +7,7 @@
 
 ## 🌟 Overview & Hackathon Compliance
 
-AgentVault X is an open-source multi-agent orchestration and governance platform built to deliver **provably safe, auditable agent workflows**. It addresses the critical reliability and safety gaps in modern AI agent deployments:
+AgentVault  is an open-source multi-agent orchestration and governance platform built to deliver **provably safe, auditable agent workflows**. It addresses the critical reliability and safety gaps in modern AI agent deployments:
 
 1. **Native Open-Weight AI Architecture**: Designed natively around open-weight models (primarily **Google Gemma 2** via local **Ollama** or hosted **OpenAI-compatible endpoints** such as Groq, vLLM, and Hugging Face). It features a dedicated multi-provider inference abstraction layer with an air-gapped deterministic safe engine fallback.
 2. **Deterministic Security & Policy Gates**: Unlike systems that give LLMs unconstrained tool execution, AgentVault X enforces **strict Role-Based Access Control (RBAC)**, **default-deny tool permissions**, and **Human-in-the-Loop (HITL) approval gates** before any mutating, code-inspecting, or high-risk task can execute.
